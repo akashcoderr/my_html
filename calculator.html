@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<script type="text/javascript">
+		function dis(x)
+		{
+       frm.txt.value=frm.txt.value+x;
+		}
+
+		//All clear buttun function CE
+		function ce()
+		{
+			frm.txt.value="";
+		}
+		// backspace button function
+		function bs()
+		{
+			frm.txt.value=frm.txt.value.slice(0,frm.txt.value.length-1);
+		}
+	</script>
+
+
+	<style type="text/css">
+		#textbox{
+			text-align: right;
+			width: 320px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-left: 3px;
+			border:2px solid white;
+			height:50px;
+			font-size: 40px;
+			border-radius: 5px; 
+
+		}
+		#container{
+			border:3px solid black;
+			width: 332px;
+			border-radius: 5px;
+			background-color: #c6c6c6;
+		}
+		.btn
+		{
+			width: 60px;
+			height: 60px;
+			border-radius: 100%;
+			margin-right: 10px;
+			margin-left:10px;
+			margin-bottom: 10px;
+
+		}
+		.btn:hover
+		{
+			border:2px solid white;
+		}
+
+
+	</style>
+
+
+
+</head>
+<body><div id="container">
+	<form name="frm">
+		<input type="textbox" id="textbox" name="txt"><br>
+		<input class="btn" type="button" name="brl" value="(" onclick="dis(brl.value)">
+		<input type="button" class="btn"  value=")" onclick="dis(brr.value)" name="brr">
+
+		<input type="button" value="CE" class="btn"  onclick="ce()" name="">
+		<input class="btn"  type="button" value="backspaces" name="" onclick="bs()"><br>
+		<input class="btn"  type="button" name="btn9" value="9" onclick="dis(btn9.value)">
+		<input class="btn"  type="button" name="btn8" value="8" onclick="dis(btn8.value)">
+		<input class="btn"  type="button" name="btn7" value="7" onclick="dis(btn7.value)">
+		<input class="btn"  type="button" name="btnd" value="/" onclick="dis(btnd.value)"><br>
+		<input type="button" class="btn"  name="btn6" value="6" onclick="dis(btn6.value)">
+		<input type="button" class="btn"  name="btn5" value="5" onclick="dis(btn5.value)">
+		<input type="button" class="btn"  name="btn4" value="4" onclick="dis(btn4.value)">
+		<input type="button" name="btnm" class="btn"  value="*" onclick="dis(btnm.value)"><br>
+		<input class="btn"  type="button" name="btn3" value="3" onclick="dis(btn3.value)">
+		<input type="button" class="btn"  name="btn2" value="2" onclick="dis(btn2.value)">
+		<input type="button" class="btn"  name="btn1" value="1" onclick="dis(btn1.value)">
+		<input type="button" name="btns" class="btn"  value="-" onclick="dis(btns.value)"><br>
+		<input class="btn"  type="button" name="btndot" value="." onclick="dis(btndot.value)">
+		<input type="button" class="btn"  name="btn0" value="0" onclick="dis(btn0.value)">
+		<input type="button" name="btneq" class="btn"  value="=" onclick="txt.value=eval(txt.value)">
+		<input class="btn"  type="button" name="btnp" value="+" onclick="dis(btnp.value)">
+	
+	</form>
+	<div>
+</body>
+</html>
